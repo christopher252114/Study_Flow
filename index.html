@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>StudyFlow - Student Study Planner</title>
+
+    <meta
+        name="description"
+        content="StudyFlow is a student study planner and task management system."
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+
+        <div class="brand">
+
+            <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+            >
+                <rect
+                    width="32"
+                    height="32"
+                    rx="9"
+                    fill="#0d9488"
+                />
+
+                <path
+                    d="M8 21c4-1 6-5 8-9m0 0c2 4 4 8 8 9M8 11h16"
+                    stroke="#fff"
+                    stroke-width="2.4"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+
+            <span>StudyFlow</span>
+
+        </div>
+
+        <nav
+            id="nav"
+            aria-label="Main navigation"
+        ></nav>
+
+        <div
+            class="profile"
+            id="profile"
+        ></div>
+
+    </aside>
+
+    <div
+        class="scrim"
+        id="scrim"
+    ></div>
+
+    <!-- Main content -->
+    <div class="content">
+
+        <!-- Top bar -->
+        <header class="topbar">
+
+            <button
+                class="btn icon"
+                id="menuBtn"
+                aria-label="Open navigation menu"
+                aria-controls="sidebar"
+            >
+                ☰
+            </button>
+
+            <h1 id="pageTitle">Dashboard</h1>
+
+            <button
+                class="btn icon"
+                id="themeBtn"
+                data-act="toggleTheme"
+                aria-label="Toggle dark mode"
+            ></button>
+
+        </header>
+
+        <!-- Page content -->
+        <main
+            id="main"
+            tabindex="-1"
+        ></main>
+
+        <!-- Footer -->
+        <footer>
+
+            <strong>StudyFlow - Student Study Planner</strong>
+
+            <span>
+                Built with HTML, CSS &amp; JavaScript ·
+                © <span id="year"></span>
+            </span>
+
+        </footer>
+
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div
+    class="backdrop"
+    id="modal"
+    hidden
+>
+
+    <div
+        class="dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="mTitle"
+    >
+
+        <div class="dhead">
+
+            <h2 id="mTitle"></h2>
+
+            <button
+                class="btn icon"
+                data-act="close"
+                aria-label="Close dialog"
+            >
+                ✕
+            </button>
+
+        </div>
+
+        <div id="mBody"></div>
+
+    </div>
+
+</div>
+
+<!-- Toast notifications -->
+<div
+    id="toasts"
+    aria-live="polite"
+></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
